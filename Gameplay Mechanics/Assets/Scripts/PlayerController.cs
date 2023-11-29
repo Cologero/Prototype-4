@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
-
+    public float speed = 5.0f;
     private Rigidbody playerRb;
     private GameObject focalPoint;
 
@@ -20,6 +19,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float forwardInput = Input.GetAxis("Vertical");
+      
         playerRb.AddForce(focalPoint.transform.forward * forwardInput * speed);
     }
 }
